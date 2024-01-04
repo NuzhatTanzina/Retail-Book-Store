@@ -1,0 +1,30 @@
+import { AddressDTO, BookDTO, SellerDTO } from './seller.dto';
+import { Repository } from 'typeorm';
+import { AddressEntity, BookEntity, OrderEntity, SellerEntity } from './seller.entity';
+export declare class SellerService {
+    private sellerRepository;
+    private bookRepository;
+    private addressRepository;
+    private orderRepository;
+    constructor(sellerRepository: Repository<SellerEntity>, bookRepository: Repository<BookEntity>, addressRepository: Repository<AddressEntity>, orderRepository: Repository<OrderEntity>);
+    current_book_info: BookDTO;
+    AddBooks(Email: string, book_info: BookDTO): Promise<BookEntity>;
+    ViewAllBooks(email: any): Promise<SellerEntity[]>;
+    ViewSingleBook(id: number): Promise<BookEntity>;
+    UpdateBookInfo(b_id: number, updated_data: BookDTO): Promise<BookEntity>;
+    DeleteBookInfo(id: number): any;
+    getBookImages(id: number, res: any): Promise<any>;
+    getBookData(sellerEmail: string, searchType: string, searchItem: string): Promise<BookEntity[]>;
+    Signup(seller_info: SellerDTO): Promise<SellerEntity>;
+    ViewSellerProfile(email: string): Promise<SellerEntity>;
+    Login(seller_info: SellerDTO): Promise<SellerEntity>;
+    UploadSellerImage(email: string, image: string): Promise<SellerEntity>;
+    getSellerImages(email: string, res: any): Promise<any>;
+    AddAddress(Seller_Email: string, address_info: AddressDTO): Promise<AddressEntity>;
+    ViewSellerAddress(Seller_Email: string): Promise<AddressEntity[]>;
+    UpdateAddress(Seller_Email: any, updated_data: AddressDTO): Promise<AddressDTO>;
+    DeleteAddress(Seller_Email: any): Promise<any>;
+    ViewAllOrders(Seller_Email: string): Promise<any>;
+    ViewSingleOrder(id: number): Promise<OrderEntity>;
+    Update_Order_Status(id: number, update_status: string): Promise<boolean>;
+}
