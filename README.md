@@ -1,5 +1,6 @@
 # Retail-Book-Store
 This online library delivers a smooth experience for both Customers and sellers because of its user-friendly layout and cutting-edge features.
+
 Project Description:
 An online marketplace for books called Retail Book Store brings together Customers and sellers from around the globe. This online library delivers a smooth experience for both Customers and sellers because of its user-friendly layout and cutting-edge features. A built-in messaging system makes it simple for sellers to offer their books for sale with all the necessary details, manage their listings, collect payments, and get in touch with possible customers. Using a variety of search criteria, customers may find books, explore listings by category, price, location, and condition, add goods to their shopping carts, and complete a secure checkout. To maintain a secure and equitable environment for all users, administrators, and moderators may oversee and watch over the platform's content, users, transactions, and policies.
 
